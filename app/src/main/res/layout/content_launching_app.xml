@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="112dp"
+        android:layout_height="107dp"
+        android:layout_centerInParent="true"
+        app:srcCompat="@drawable/wiki" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@android:style/Animation"
+        android:layout_width="328dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="51dp"
+        android:fontFamily="@font/carter_one"
+        android:text="Fill In The Blank"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
+        android:textStyle="italic"></TextView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="125dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Game"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        android:textStyle="italic"
+        android:fontFamily="@font/carter_one" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:background="@color/colorPrimary"
+        android:text="Start Game"
+        android:textAllCaps="false"
+        android:textSize="36sp"
+        android:textStyle="italic"
+        android:visibility="invisible"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/carter_one" />
+
+
+</RelativeLayout>

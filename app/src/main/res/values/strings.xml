@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Wikipedia Fill In The Blank Game</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_fill_in_the_blank">Fill In The Blank</string>
+    <string name="title_activity_score">Score</string>
+    <string name="title_activity_result">Result</string>
+    <string name="error_1_no_connection_desc">A network error has occurred. Make sure you have a working internet connection.</string>
+    <string name="error_1_no_connection">Network Error</string>
+</resources>
