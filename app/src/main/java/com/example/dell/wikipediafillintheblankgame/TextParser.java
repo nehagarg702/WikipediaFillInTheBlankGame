@@ -1,5 +1,8 @@
-package com.example.dell.wikipediafillintheblankgame;
+/**
+ * The purpose of this class is to parse the data and shuffle the words that are going to be filled.
+ */
 
+package com.example.dell.wikipediafillintheblankgame;
 import java.text.BreakIterator;
 import java.util.ArrayList;
 import java.util.Collections;

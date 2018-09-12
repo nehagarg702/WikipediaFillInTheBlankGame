@@ -1,3 +1,9 @@
+/**
+ * The purpose of this activity is to display the score of the user and display the two buttons Replay and Result.
+ * This activity also show the dialog box which tell that your score is highest or equal to highest or lower than highest.
+ * On the press of Replay button it again start the game with another wikipedia Random page.
+ * On press of Result button it goes to Result activity which show the result.
+ */
 package com.example.dell.wikipediafillintheblankgame;
 
 import android.app.AlertDialog;
@@ -6,8 +12,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -25,6 +29,10 @@ public class Score extends AppCompatActivity {
     Database data;
     SQLiteDatabase db;
 
+    /**
+     * The puspose of this function is to get back the activity in full screen idf dialog of another application appears in between.
+     * @param hasFocus
+     */
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         new UI().fullScreen(getWindow().getDecorView());
@@ -52,6 +60,11 @@ public class Score extends AppCompatActivity {
         b1=(Button)findViewById(R.id.btn_results);
         b2=(Button)findViewById(R.id.btn_play_again);
         b1.setOnClickListener(new View.OnClickListener() {
+
+            /**
+             * On press of this button control is send to the next activity Result.
+              * @param v
+             */
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(Score.this,Result.class);
@@ -62,6 +75,10 @@ public class Score extends AppCompatActivity {
             }
         });
         b2.setOnClickListener(new View.OnClickListener() {
+            /**
+             * On press of this button, another random wikipedia page is opened
+             * @param v
+             */
             @Override
             public void onClick(View v) {
                 new UI().showdata(Score.this);
@@ -77,19 +94,10 @@ public class Score extends AppCompatActivity {
         super.onStart();
     }
 
-
-    @Override
-    protected void onStop() {
-        new UI().fullScreen(getWindow().getDecorView());
-        super.onStop();
-    }
-
-    @Override
-    protected void onRestart() {
-        finish();
-        super.onRestart();
-    }
-
+    /**
+     * The purpose of this function is to show the alert dialog which tell that score is highest or equal to highest or lower than
+     * highest score.
+     */
     public void dialog()
     {
         AlertDialog.Builder dialog= new AlertDialog.Builder(Score.this);

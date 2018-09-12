@@ -1,17 +1,16 @@
+/**
+ * The Purpose of this Activity is to display the list of the answers selected by the user and list of correct answers in grid layout.
+ */
 package com.example.dell.wikipediafillintheblankgame;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.GridLayout;
 import android.widget.TextView;
 
 import static android.view.View.TEXT_ALIGNMENT_CENTER;
-
 public class Result extends AppCompatActivity {
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {

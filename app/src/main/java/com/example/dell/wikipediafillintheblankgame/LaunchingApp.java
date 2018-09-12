@@ -1,18 +1,18 @@
+/**
+ * This activity is the first activity appear on the screen. After 1.5 second start game button is shown. by clicking on ths button
+ * user can start the game.
+ */
+
 package com.example.dell.wikipediafillintheblankgame;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.PersistableBundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class LaunchingApp extends AppCompatActivity {
 
@@ -25,6 +25,9 @@ public class LaunchingApp extends AppCompatActivity {
         start=(Button)findViewById(R.id.button);
         start.setVisibility(View.INVISIBLE);
         new UI().fullScreen(getWindow().getDecorView());
+        /**
+         * The purpose of this is to hide the button for 1.5 second and show the button after 1.5 seconds.
+         */
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

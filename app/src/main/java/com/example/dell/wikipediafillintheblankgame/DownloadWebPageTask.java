@@ -1,3 +1,8 @@
+/**
+ * The purpose of this class is to extract the data from wikipedia random page.
+ * This class shows the dialog box on screen and in background extract the data from wikipedia page.
+ */
+
 package com.example.dell.wikipediafillintheblankgame;
 
 import android.app.ProgressDialog;

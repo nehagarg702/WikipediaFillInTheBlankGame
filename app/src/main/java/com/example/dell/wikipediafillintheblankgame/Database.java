@@ -1,3 +1,7 @@
+/**
+ * The purpose of this class is to create the table in memory which is going to add all the score scored by user.
+ * This class is used to fetch the data from database and compare the sore with higgest score.
+ */
 package com.example.dell.wikipediafillintheblankgame;
 
 import android.content.Context;

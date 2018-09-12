@@ -1,3 +1,8 @@
+/**
+ * The purpose of this activity is to display the wikipedia rand page data with 10 blanks. When user click on that blanks, a dialog box
+ * appears which contain the list of 10 words and user has to select one word from that list. This activity also contain a floating
+ * which move when we move it  and on click go to next activity which show the score.
+ */
 package com.example.dell.wikipediafillintheblankgame;
 
 import android.app.AlertDialog;
@@ -7,7 +12,6 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
@@ -43,6 +47,9 @@ public class FillInTheBlank extends AppCompatActivity {
         fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnTouchListener(new View.OnTouchListener() {
             @Override
+            /**
+             * The purpose of this function to to slide the button when users try to slide the button and go to next activity when button is clicked.
+             */
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 int action = motionEvent.getAction();
                 if (action == MotionEvent.ACTION_DOWN) {
@@ -119,6 +126,9 @@ public class FillInTheBlank extends AppCompatActivity {
         }
     }
 
+    /**
+     * The purpose of this function to calculate the score and pass the score along with control with other necessary data to the next Score activity
+     */
     public void performClick()
     {
                 int score=0;
@@ -145,6 +155,16 @@ public class FillInTheBlank extends AppCompatActivity {
         new UI().fullScreen(getWindow().getDecorView());
         super.onStart();
     }
+
+    /**
+     * The purpose of this function is to display the dialog when a blank word is clicked.
+     * on selection of any word from list it is added into the list of selected answer words.
+     * @param index
+     * @param pstart
+     * @param pend
+     * @param spans
+     * @return
+     */
     private ClickableSpan getClickableSpan(final int index, final int pstart,
                                            final int pend, final Editable spans) {
         return new ClickableSpan() {
