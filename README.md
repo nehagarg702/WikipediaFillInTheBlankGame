@@ -1,4 +1,4 @@
-Wikipedia Fill IN THe Blank Game
+#Wikipedia Fill In THe Blank Game
 In this game, Firtly a launching app appear on which a start game button appears after 1.5 sec. 
 on press of button firstly it check if network is available or not. If network is not available then show network error dialog otherwise go to next activity fill in the Blank.
 the next activity show the text with blanks. on clicking on blanks a dialog appear which contain option. On click of options blanks are replaced with selected options
