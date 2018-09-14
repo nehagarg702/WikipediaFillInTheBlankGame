@@ -27,7 +27,7 @@ public class FillInTheBlank extends AppCompatActivity {
     TextView tv,tv1 ;
     String result;
     TextParser.GameOptions gameOptions = null;
-    String[] useroptions = new String[0];
+    String[] useroptions = new String[10];
     private final String BLANKS = "_______";
     UI ui=new UI();
     Intent intent;
@@ -112,7 +112,6 @@ public class FillInTheBlank extends AppCompatActivity {
         tv1.setText(getIntent().getStringExtra("title"));
         tv.setMovementMethod(LinkMovementMethod.getInstance());
         gameOptions = TextParser.getGameOptions(result);
-        useroptions = new String[10];
         tv.setText(gameOptions.content, TextView.BufferType.EDITABLE);
         Editable spans = (Editable) tv.getText();
         for (int i = 0; i < 10; i++) {

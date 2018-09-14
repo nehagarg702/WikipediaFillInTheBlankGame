@@ -31,6 +31,8 @@
                 android:text="TextView"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
                 android:fontFamily="@font/carter_one"/>
 
             <TextView

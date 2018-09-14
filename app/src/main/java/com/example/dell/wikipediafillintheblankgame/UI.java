@@ -51,13 +51,8 @@ public class UI {
      */
     public void showdata(Activity context)
     {
-        if(!isNetworkAvailable(context))
-            showNetworkErrorDialog(context,true);
-        else
-        {
             DownloadWebPageTask task = new DownloadWebPageTask(context);
             task.execute(new String[] { "http://en.wikipedia.org/wiki/Special:Random" });
-        }
     }
 
 

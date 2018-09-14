@@ -94,6 +94,12 @@ public class Score extends AppCompatActivity {
         super.onStart();
     }
 
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        finish();
+    }
+
     /**
      * The purpose of this function is to show the alert dialog which tell that score is highest or equal to highest or lower than
      * highest score.

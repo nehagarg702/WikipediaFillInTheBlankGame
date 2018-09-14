@@ -50,6 +50,12 @@ public class LaunchingApp extends AppCompatActivity {
     }
 
     @Override
+    protected void onStart() {
+        new UI().fullScreen(getWindow().getDecorView());
+        super.onStart();
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_launching_app, menu);
